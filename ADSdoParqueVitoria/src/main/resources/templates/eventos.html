@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${titulo}">Eventos</title>
+</head>
+<body>
+<h1 th:text="${titulo}">Eventos da Igreja</h1>
+
+<ul>
+  <li th:each="evento : ${eventos}">
+    <strong th:text="${evento.titulo}"></strong> –
+    <span th:text="${#temporals.format(evento.data, 'dd/MM/yyyy')}"></span><br/>
+    <p th:text="${evento.descricao}"></p>
+  </li>
+</ul>
+
+<a href="/">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fale Conosco</title>
+</head>
+<body>
+<h1>Fale Conosco</h1>
+
+<div th:if="${mensagemSucesso}">
+    <p style="color: green;" th:text="${mensagemSucesso}"></p>
+</div>
+
+<form th:action="@{/contato}" th:object="${mensagemContato}" method="post">
+    <label>Nome:</label><br/>
+    <input type="text" th:field="*{nome}" required/><br/><br/>
+
+    <label>Email:</label><br/>
+    <input type="email" th:field="*{email}" required/><br/><br/>
+
+    <label>Mensagem:</label><br/>
+    <textarea th:field="*{mensagem}" rows="5" required></textarea><br/><br/>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<br/>
+<a href="/">Voltar</a>
+</body>
+</html>

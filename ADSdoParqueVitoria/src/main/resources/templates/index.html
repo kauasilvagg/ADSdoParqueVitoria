@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Página Inicial</title>
+</head>
+<body>
+<h1 th:text="${titulo}">Bem-vindo</h1>
+
+<nav>
+    <a href="/">Home</a> |
+    <a href="/eventos">Eventos</a> |
+    <a href="/contato">Contato</a> |
+    <a href="/admin/eventos">Painel Admin</a>
+</nav>
+</body>
+</html>

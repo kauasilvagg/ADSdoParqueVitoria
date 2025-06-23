@@ -1,7 +1,8 @@
 package Service;
 
-import com.shalomigreja.model.MensagemContato;
-import com.shalomigreja.repository.MensagemContatoRepository;
+
+import Model.MensagemContato;
+import Repository.MensagemContatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,5 +24,8 @@ public class MensagemContatoService {
 
     public void deletar(Long id) {
         mensagemContatoRepository.deleteById(id);
+    }
+
+    public void salvar(Controller.MensagemContato mensagemContato) {
     }
 }

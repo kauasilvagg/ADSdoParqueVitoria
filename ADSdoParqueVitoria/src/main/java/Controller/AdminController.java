@@ -1,7 +1,7 @@
 package Controller;
 
+import Service.EventoService;
 import com.shalomigreja.model.Evento;
-import com.shalomigreja.service.EventoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

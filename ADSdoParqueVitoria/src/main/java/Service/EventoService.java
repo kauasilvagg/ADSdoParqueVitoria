@@ -1,7 +1,7 @@
 package Service;
 
+import Repository.EventoRepository;
 import com.shalomigreja.model.Evento;
-import com.shalomigreja.repository.EventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

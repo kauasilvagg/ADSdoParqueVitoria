@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Inscrições</title>
+</head>
+<body>
+<h1>Inscrições recebidas</h1>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Tipo de Evento</th>
+    <th>Data e Hora</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="inscricao : ${inscricoes}">
+    <td th:text="${inscricao.nome}"></td>
+    <td th:text="${inscricao.email}"></td>
+    <td th:text="${inscricao.tipoEvento}"></td>
+    <td th:text="${#temporals.format(inscricao.dataHora, 'dd/MM/yyyy HH:mm')}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<br/><a href="/">Voltar</a>
+</body>
+</html>

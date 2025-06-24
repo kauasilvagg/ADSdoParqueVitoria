@@ -1,4 +1,4 @@
-package Model;
+package com.shalomigreja.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

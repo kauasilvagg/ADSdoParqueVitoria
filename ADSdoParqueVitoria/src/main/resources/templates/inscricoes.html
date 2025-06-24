@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscrição em Eventos</title>
+</head>
+<body>
+<h1>Inscreva-se em um evento</h1>
+
+<div th:if="${mensagem}">
+  <p style="color: green;" th:text="${mensagem}"></p>
+</div>
+
+<form th:action="@{/inscricoes}" th:object="${inscricao}" method="post">
+  <label>Nome:</label><br/>
+  <input type="text" th:field="*{nome}" required/><br/><br/>
+
+  <label>Email:</label><br/>
+  <input type="email" th:field="*{email}" required/><br/><br/>
+
+  <label>Tipo de Evento:</label><br/>
+  <select th:field="*{tipoEvento}" required>
+    <option value="Culto">Culto</option>
+    <option value="Congresso">Congresso</option>
+    <option value="Retiro">Retiro</option>
+  </select><br/><br/>
+
+  <button type="submit">Inscrever</button>
+</form>
+
+<br/><a href="/">Voltar para o início</a>
+</body>
+</html>

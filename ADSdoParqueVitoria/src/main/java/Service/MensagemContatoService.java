@@ -1,7 +1,7 @@
 package Service;
 
 
-import Model.MensagemContato;
+import com.shalomigreja.model.MensagemContato;
 import Repository.MensagemContatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

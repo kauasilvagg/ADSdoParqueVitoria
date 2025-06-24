@@ -32,10 +32,22 @@ public class WebSecurityConfig {
     public InMemoryUserDetailsManager userDetailsService() {
         UserDetails admin = User.builder()
                 .username("admin")
-                .password("{noop}senha123") // "{noop}" significa que a senha não está criptografada
+                .password("{noop}senha123")
                 .roles("ADMIN")
                 .build();
 
-        return new InMemoryUserDetailsManager(admin);
+        UserDetails secretaria = User.builder()
+                .username("secretaria")
+                .password("{noop}secretaria123")
+                .roles("SECRETARIA")
+                .build();
+
+        UserDetails pastor = User.builder()
+                .username("pastor")
+                .password("{noop}pastor123")
+                .roles("PASTOR")
+                .build();
+
+        return new InMemoryUserDetailsManager(admin, secretaria, pastor);
     }
 }

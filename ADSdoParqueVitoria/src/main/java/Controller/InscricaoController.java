@@ -1,3 +1,4 @@
+
 package Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,11 +34,12 @@ public class InscricaoController {
     }
 
     private class InscricaoService {
-        public void salvar(Controller.InscricaoController.Inscricao inscricao) {
-        }
 
         public Object listarTodas() {
             return null;
+        }
+
+        public void salvar(Inscricao inscricao) {
         }
     }
 

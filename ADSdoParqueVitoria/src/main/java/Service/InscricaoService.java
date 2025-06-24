@@ -1,6 +1,6 @@
 package Service;
 
-import Model.Inscricao;
+import com.shalomigreja.model.Inscricao;
 import Repository.InscricaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
